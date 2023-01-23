@@ -84,4 +84,4 @@ def homepredict():
     result = np.square(pickled_model.predict(test))
     return render_template('index.html', prediction = "The prediction for this features is : " + str(ceil(result[0])))
 
-app.run(debug=False)
+app.run(port=8080, debug=False)
