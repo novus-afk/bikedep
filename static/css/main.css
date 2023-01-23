@@ -1,0 +1,111 @@
+body {
+    background-image: url(../background/background.jpg);
+    background-attachment:fixed;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    text-align:center;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+form {
+    margin: 50px auto;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #333;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 0px 0px 10px 0px #333;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+    display: block;
+}
+
+hr {
+    height: 1px;
+    color: #123455;
+    background-color: #123455;
+    border: none;
+    margin: 20px 0;
+}
+
+input, select {
+    width: 10.5rem;
+    border-radius: 4px;
+    border: 1px solid #333;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0px 0px 10px 0px #3498db;
+}
+
+strong {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+.container {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Responsive */
+@media screen and (max-width: 1400px) {
+  .container {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.nocontainer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sendvalue {
+    background-color: #2ecc71;
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.sendvalue:hover {
+    background-
