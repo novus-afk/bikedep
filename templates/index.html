@@ -2,14 +2,14 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8"/>
-	<title>Api Rented Bike Count</title>
+	<title>Rented Bike Count</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-	<link rel="icon" href="{{ url_for('static', filename='icon/bike.png') }}" type="image/icon">
+	<link rel="icon" href="{{ url_for('static', filename='icon/bike.png') }}" type="image/png">
   </head>
   <body>
- 
+
   <form method="post" action="">
-    <h1>Predict the number of rented bikes</h1>
+    <h1>Seoul Bike Sharing Demand Prediction (Regression)</h1>
     <hr>
     <div class="container">
         <div>
@@ -18,42 +18,42 @@
         </div>
 
         <div>
-            <label for="dTemperature">Dew point temperature (°C)</label>  
+            <label for="dTemperature">Dew point temperature (°C)</label>
             <input type="number" min=-30.60 max=27.2 step="0.01" name="dTemperature" id="dTemperature" value="0" />
         </div>
 
         <div>
-            <label for="Temperature">Temperature (°C)</label>  
+            <label for="Temperature">Temperature (°C)</label>
             <input type="number" min=-17.8 max=39.4 step="0.01" name="Temperature" id="Temperature" value="0" />
         </div>
-        
-        <div> 
-            <label for="Humidity">Humidity (%)</label>  
+
+        <div>
+            <label for="Humidity">Humidity (%)</label>
             <input type="number" min="0" max="100" name="Humidity" id="Humidity" value="0" />
         </div>
 
         <div>
-            <label for="WindSpeed">Wind Speed (m/s)</label>  
+            <label for="WindSpeed">Wind Speed (m/s)</label>
             <input type="number" step="0.01" min="0" max="10" name="WindSpeed" id="WindSpeed" value="0" />
         </div>
-   
-        <div>    
-            <label for="Visibility">Visibility (10m)</label>  
-            <input type="number" min="0" max="2000" name="Visibility" id="Visibility" value="0" />
-        </div>    
 
         <div>
-            <label for="Rainfall">Rainfall (mm)</label>  
+            <label for="Visibility">Visibility (10m)</label>
+            <input type="number" min="0" max="2000" name="Visibility" id="Visibility" value="0" />
+        </div>
+
+        <div>
+            <label for="Rainfall">Rainfall (mm)</label>
             <input type="number" step="0.01" min="0" max="50" name="Rainfall" id="Rainfall" value="0" />
         </div>
-        
+
         <div>
-            <label for="Snowfall">Snowfall (cm)</label>  
+            <label for="Snowfall">Snowfall (cm)</label>
             <input type="number" step="0.01" min="0" max="15" name="Snowfall" id="Snowfall" value="0" />
         </div>
-        
+
         <div>
-            <label for="Season">Season</label>  
+            <label for="Season">Season</label>
             <select id="Season" name="Season">
                 <option value="1">Winter</option>
                 <option value="2">Spring</option>
@@ -63,43 +63,45 @@
         </div>
 
         <div>
-            <label for="Holiday">Holiday</label>  
+            <label for="Holiday">Holiday</label>
             <select id="Holiday" name="Holiday">
                 <option value="0">No</option>
                 <option value="1">Yes</option>
             </select>
         </div>
-        
+
         <div>
-            <label for="FunctioningDay">Functioning Day</label>  
+            <label for="FunctioningDay">Functioning Day</label>
             <select id="FunctioningDay "name="FunctioningDay">
                 <option value="0">No</option>
                 <option value="1">Yes</option>
             </select>
         </div>
-        
+
         <div>
-            <label for="Month">Month</label>  
+            <label for="Month">Month</label>
             <input type="number" min="1" max="12" id="Month" name="Month" value="1" />
         </div>
-        
+
         <div>
-            <label for="Day">Day of Week</label>  
+            <label for="Day">Day of Week</label>
             <input type="number" min="1" max="7" id="Day" name="Day" value="1" />
         </div>
-        
+
         <div>
-            <label class="nocontainer" for="SolarRadiation">Solar Radiation (MJ/m2)</label>  
+            <label for="SolarRadiation">Solar Radiation (MJ/m2)</label>
             <input type="number" step="0.01" min="0" max="4" name="SolarRadiation" id="SolarRadiation" value="0" />
         </div>
     </div>
-     
+
     <br>
-    <input class="sendvalue" type="submit" value="Launch the prediction">
-    <hr>     
+    <input class="sendvalue" type="submit" value="Click to predict Bike Count">
+    <hr>
     <strong>{{prediction}}</strong>
     <hr>
-    <p class="copyright">Credits: HTML by Pierre and Anthony</p>
+    <p class='para'>Seoul Bike sharing demand prediction, based on Xtreme gradient boosting model. Checkout the <a href="https://github.com/novus-afk/BikeSharingDemandRegression">repository</a> for xgb model build.</p>
+    <p class='para'>Model made by: <a href="https://www.linkedin.com/in/yahya-ansari/">Yahya Ansari</a> and <a href="https://www.linkedin.com/in/prafull-korde-400560126/">Prafull Korde</a></p>
+    <p class='credits'>Credits: HTML by Pierre and Anthony, Background image by We Ride Korea</p>
   </form>
   </body>
 </html>

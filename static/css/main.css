@@ -2,6 +2,7 @@ body {
     background-image: url(../background/background.jpg);
     background-attachment:fixed;
     background-position:center center;
+
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
@@ -10,6 +11,10 @@ body {
 
 h1 {
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: 45px;
+    letter-spacing: -1px;
+    line-height: 50px;
     text-align: center;
     color: #333;
     margin-top: 50px;
@@ -17,19 +22,22 @@ h1 {
 }
 
 form {
-    margin: 50px auto;
-    padding: 3rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid #333;
-    border-radius: 10px;
-    height: auto;
-    box-shadow: 0px 0px 10px 0px #333;
+	margin: 50px 10%;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	background-color: rgba(255, 255, 255, 0.75);
+	border: 2px solid #333; /* 2 pixel border */
+	border-style: solid;
+	border-color: black;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px 0px #333; /* keep the subtle shadow */
+	height: auto;
 }
 
 label {
     font-size: 20px;
     font-weight: bold;
-    color: #333;
+    color: black;
     margin-top: 15px;
     display: block;
 }
@@ -42,12 +50,12 @@ hr {
     margin: 20px 0;
 }
 
-input, select {
+input , select {
     width: 10.5rem;
-    border-radius: 4px;
+    border-radius : 4px;
     border: 1px solid #333;
-    padding: 12px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 14px;
 }
 
 input:focus, select:focus {
@@ -58,9 +66,21 @@ input:focus, select:focus {
 
 strong {
     display: block;
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    margin-top: 1.2rem;
     color: #333;
+}
+
+
+.para{
+    font-family: 'Raleway',sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+}
+.credits{
+    font-family: 'Raleway',sans-serif;
+    font-size: 12px;
+    line-height: 15px;
 }
 
 .container {
@@ -88,24 +108,32 @@ strong {
   }
 }
 
-.nocontainer {
-    margin-top: 30px;
-    text-align: center;
-}
 
 .sendvalue {
-    background-color: #2ecc71;
-    width: 250px;
-    height: 40px;
+    background-color: #2ecc71; /* green color */
+    width: 300px;
+    height: 60px;
     border-radius: 8px;
-    margin-top: 10px;
-    color: #fff;
+    color: #fff; /* white text color */
     font-weight: bold;
     text-align: center;
     line-height: 40px;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; /* smooth transition when hover over */
+    text-transform: uppercase; /* makes the text uppercase */
+    letter-spacing: 1px; /* adds 1px space between letters */
+    font-size: 14px; /* increase font-size for better readability */
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.3); /* adds a subtle shadow */
+    justify-content: center; /* centers text horizontally */
+    align-items: center; /* centers text vertically */
 }
 
 .sendvalue:hover {
-    background-
+    background-color: #27ae60; /* darker green color when hover */
+    transform: translateY(-2px); /* moves the button 2px up */
+}
+
+.sendvalue:active {
+    transform: translateY(2px); /* moves the button 2px down when clicked */
+    box-shadow: none; /* removes the shadow */
+}

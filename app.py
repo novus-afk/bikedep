@@ -35,14 +35,14 @@ def homepredict():
     hr = int(request.form['Hour'])
     pred[7+hr]=1
 
-    # update temp 
+    # update temp
     temp=float(request.form['Temperature'])
     dtemp=float(request.form['dTemperature'])
     pred[53]=(0.5*temp)+(0.5*dtemp)
 
     # update humidity
     pred[0]=int(request.form['Humidity'])
-    
+
     # update wndspeed
     pred[1] = float(request.form['WindSpeed'])
 
@@ -77,11 +77,12 @@ def homepredict():
     # update day of the week
     day=int(request.form['Day'])
     pred[45+day]=1
-    
+
     test = scaler.transform(np.array(pred).reshape(1,-1))
 
     # Testing on one instance
     result = np.square(pickled_model.predict(test))
     return render_template('index.html', prediction = "The prediction for this features is : " + str(ceil(result[0])))
 
-app.run(port=8080, debug=False)
+if __name__ == '__main__':
+    app.run(  debug=False)
